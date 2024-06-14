@@ -32,7 +32,6 @@ Other tools
 ###########
 Some other tools we use for code quality include:
 
-- Black_ for code formatting
 - pytest_ for testing
 
 A complete list is kept in our pyproject.toml_ file in dev dependencies.
@@ -59,7 +58,7 @@ interpreter installed. For example, to run with Python 3.10, run::
 
 While the use of pre-commit_ is optional, it is highly encouraged, as it runs
 automatic fixes for files when ``git commit`` is called, including code
-formatting with ``black`` and ``ruff``.  The versions available in ``apt`` from
+formatting ``ruff format``.  The versions available in ``apt`` from
 Debian 11 (bullseye), Ubuntu 22.04 (jammy) and newer are sufficient, but you can
 also install the latest with ``pip install pre-commit``. Once you've installed
 it, run ``pre-commit install`` in this git repository to install the pre-commit
@@ -228,7 +227,7 @@ Commits that change the syntax, format, or aesthics of any text the codebase.
 The meaning of the text should not change.
 
 Examples include:
-* automatic changes from tools like ``black`` and ``ruff format``
+* automatic changes from tools like ``ruff format``
 * changes to documentation that don't affect the meaning
 * correcting a typo
 
@@ -356,7 +355,6 @@ be included.
 The changelog should link to the project's GitHub releases page, which
 contains an exhaustive list of all commits added to the release.
 
-.. _Black: https://black.readthedocs.io
 .. _`Canonical contributor licence agreement`: http://www.ubuntu.com/legal/contributors/
 .. _Codespell: https://github.com/codespell-project/codespell
 .. _`conventional commit`: https://www.conventionalcommits.org/en/v1.0.0/#summary
